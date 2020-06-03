@@ -3,22 +3,22 @@
 date_default_timezone_set('America/New_York');
 define('PR_PUB_INTEGRATION_CACHE_EXPIRATION_TIME_IN_SECONDS', 5 * 60);
 define('INTEGRATION_BASE_URL', 'http://prscripts.com/d/?resource=pubJS');
-define('SW_URL', 'https://prscripts.com/d/n/sw?did=337945');
+define('SW_URL', 'https://prscripts.com/d/n/sw?did=337930');
 define('CURL_TIMEOUT', 5);
-define('DOMAIN_ID', "337945");
+define('DOMAIN_ID', "337930");
 define('SERVER_PROTOCOL', 'HTTP/1.1');
-define('SECRET_KEY', "f328a82d5bcf45e213520c5309d63ea67efec109ec8e9722132ffb793754a860");
-define('CREATED_TIMESTAMP', "1591126567");
+define('SECRET_KEY', "0a03d648fd6394d0779d80529ba4a2e5f929d5a0d57c89332dc7978bf002bca4");
+define('CREATED_TIMESTAMP', "1591204167");
 
 /**
  * The key to store the script in cache, or the name of the local cache file.
  */
-define('CACHEKEY', 'prCachedPRIntegrationScriptFor337945');
+define('CACHEKEY', 'prCachedPRIntegrationScriptFor337930');
 
 /**
  * The key to store the service worker in cache, or the name of the local cache file.
  */
-define('SW_CACHEKEY', 'prCachedServiceWorkerFor337945');
+define('SW_CACHEKEY', 'prCachedServiceWorkerFor337930');
 
 /**
  * @var          boolean         Whether or not the plugrush integration script should be cached
@@ -51,7 +51,7 @@ if (isset($_GET['sw'])) {
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_TIMEOUT => CURL_TIMEOUT,
         CURLOPT_USERAGENT => 'PRIntegrationScript',
-        CURLOPT_REFERER => "vintcellmart.com",
+        CURLOPT_REFERER => "haccone.com",
     ));
 
     $response = curl_exec($curl);
@@ -86,7 +86,7 @@ curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_TIMEOUT => CURL_TIMEOUT,
     CURLOPT_USERAGENT => $userAgent,
-    CURLOPT_REFERER => !empty($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "vintcellmart.com",
+    CURLOPT_REFERER => !empty($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "haccone.com",
 ));
 
 $response = curl_exec($curl);
